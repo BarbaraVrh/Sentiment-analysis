@@ -1,0 +1,1 @@
+This project was creted for a software engineering class as an assignment. The actual app.py file analyzes the sentiment of a statement that is put in using a form and ranks it using the azure cognitive service for sentiment analysis. Starter code was provided for all the templates, as well as the azuresqlconnector and the app file by professor Daniel Madison.
