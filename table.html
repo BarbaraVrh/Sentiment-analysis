@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/form-example.css') }}">
+    <title>Result table</title>
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <div class="topnav">
+        {% for item in nav.top %}
+        <a class="{{ 'active' if item.is_active else '' }}" href="{{ item.url }}">{{ item.label }}</a>
+        {% endfor %}
+    </div>
+
+    <h1>Sentiment analysis results</h1>
+   
+    <table id="table1">
+        <tr>
+            <th>Text</th>
+            <th>Text analysis</th>
+        </tr>
+
+        <!-- Loop through and display all rows from the SQL query -->
+        {% for row in records %}
+        <tr>
+            <td>{{ row.Column1 }}</td>
+            <td>{{ row.Column2}}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+</body>
+</html>
